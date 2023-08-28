@@ -15,14 +15,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 import DropDownPicker from 'react-native-dropdown-picker';
 
 
-const preview_images = {
-        image_1: require("../assets/story_image_1.png"),
-        image_2: require("../assets/story_image_2.png"),
-        image_3: require("../assets/story_image_3.png"),
-        image_4: require("../assets/story_image_4.png"),
-        image_5: require("../assets/story_image_5.png"),
-  
-};
+//passo 1
 export default class CreateStory extends Component {
   constructor(props) {
     super(props);
@@ -53,14 +46,7 @@ export default class CreateStory extends Component {
               style={styles.previewImage}
             ></Image>
             <View style={{ height: RFValue(this.state.dropdownHeight) }}>
-              <DropDownPicker
-                items={[
-                  { label: "Image 1", value: "image_1" },
-                  { label: "Image 2", value: "image_2" },
-                  { label: "Image 3", value: "image_3" },
-                  { label: "Image 4", value: "image_4" },
-                  { label: "Image 5", value: "image_5" },
-                ]}
+             //Passo 2
                 defaultValue={this.state.previewImage}
                 open={this.state.dropdownHeight == 170 ? true : false}
                 onOpen={() => {
@@ -85,13 +71,7 @@ export default class CreateStory extends Component {
                 }
               />
             </View>
-            <ScrollView>
-              <TextInput
-                style={styles.inputFont}
-                onChangeText={(title) => this.setState({ title })}
-                placeholder={"Title"}
-                placeholderTextColor="white"
-              />
+           //Passo 3
 
               <TextInput
                 style={[
